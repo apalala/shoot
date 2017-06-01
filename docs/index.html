@@ -8,33 +8,41 @@
         <title>Shoot!</title>
         <meta charset="utf-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="3column.css" />
         <link rel="stylesheet" href="style.css" />
+
     </head>
     <body>
         <div class="container-fluid center intro">
             <h1>Shoot!</h1>
             <p>A reponsive page with twitter bootstrap</p>
+            <!--
             <div class="credit">
                 <a href="https://stackoverflow.com/a/31136796">
                     https://stackoverflow.com/a/31136796
                 </a>
+                <br/>
+                <a href="http://jsfiddle.net/krWLA/3/">
+                    http://jsfiddle.net/krWLA/3/
+                </a>
             </div>
+            -->
             <span class="device">
                 <span class="visible-xs hidden-sm hidden-md hidden-lg">xs</span>
                 <span class="hidden-xs visible-sm hidden-md hidden-lg">sm</span>
                 <span class="hidden-xs hidden-sm visible-md hidden-lg">md</span>
                 <span class="hidden-xs hidden-sm hidden-md visible-lg">lg</span>
+                <span id="browser-size"></span>
             </span>
         </div>
 
 
         <div id="pagewrap">
-
             <header>
                 <h1>3 Column Responsive Layout</h1>
                 <div class="credit">
@@ -47,6 +55,30 @@
             <section id="content">
                 <h2>1st Content Area</h2>
                 <p>This page demonstrates a 3 column responsive layout, complete with responsive images and jquery slideshow.</p>
+                <!--
+                    http://jsfiddle.net/krWLA/3/
+                    <h3>
+                        <span id="screen-size"></span>
+                        screen
+                    </h3>
+                -->
+                <script>
+                    $(window).on('resize', showSize);
+
+                    showSize();
+
+                    function showSize() {
+                        $('#browser-size').html(
+                            $(window).height() + 'x'
+                            +$(window).width()
+                        );
+                        $('#screen-size').html(
+                            screen.height
+                            +'x'
+                            +screen.width
+                        );
+                    }
+                </script>
             </section>
 
             <section id="middle">
