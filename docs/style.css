@@ -1,0 +1,16 @@
+div.intro {
+    margin: auto;
+    text-align: center;
+}
+
+.device {
+    color: navy;
+    font-weight: bold;
+    font-size: 250%;
+}
+
+.credit {
+    font-style: italic;
+    font-size: 80%;
+    margin: 0;
+}
