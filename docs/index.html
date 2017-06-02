@@ -70,14 +70,14 @@
                     showSize();
 
                     function showSize() {
-                        $('#browser-size').html(
-                            $(window).height() + 'x'
-                            +$(window).width()
-                        );
                         $('#screen-size').html(
                             screen.height
                             +'x'
                             +screen.width
+                        );
+                        $('#browser-size').html(
+                            $(window).height() + 'x'
+                            +$(window).width()
                         );
                     }
                 </script>
