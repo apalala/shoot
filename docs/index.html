@@ -71,13 +71,14 @@
 
                     function showSize() {
                         $('#screen-size').html(
-                            screen.height
-                            +'x'
                             +screen.width
+                            +'x'
+                            screen.height
                         );
                         $('#browser-size').html(
-                            $(window).height() + 'x'
                             +$(window).width()
+                            + 'x'
+                            $(window).height()
                         );
                     }
                 </script>
